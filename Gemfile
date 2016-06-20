@@ -12,6 +12,7 @@ gem 'responders'
 gem 'enumerate_it'
 gem 'slim-rails'
 gem 'simple_form'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug'

@@ -106,6 +106,8 @@ GEM
       pkg-config (~> 1.1.7)
     pg (0.18.4)
     pkg-config (1.1.7)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (1.6.4)
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
@@ -223,6 +225,7 @@ DEPENDENCIES
   jquery-rails
   meta_request
   pg (~> 0.15)
+  pundit
   rails (= 4.2.6)
   responders
   rspec-rails (~> 3.4)
