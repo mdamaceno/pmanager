@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  errors:
+    rules:
+      email:
+        filled?: "is missing"
+        email?: "is invalid"
