@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'pundit'
 gem 'ar-uuid'
 gem 'friendly_id', '~> 5.1.0'
+gem 'dry-validation'
 
 group :development, :test do
   gem 'byebug'
