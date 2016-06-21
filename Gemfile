@@ -13,6 +13,7 @@ gem 'enumerate_it'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'pundit'
+gem 'ar-uuid'
 
 group :development, :test do
   gem 'byebug'

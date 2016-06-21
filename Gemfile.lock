@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    ar-uuid (0.1.2)
+      activerecord
     arel (6.0.3)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -212,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ar-uuid
   better_errors
   brakeman
   byebug
