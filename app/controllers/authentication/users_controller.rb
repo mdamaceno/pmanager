@@ -3,16 +3,19 @@ class Authentication::UsersController < ApplicationController
   end
 
   def create
-    if validates.messages.empty?
-      user = User.new(user_params)
-      if user.save
-        session[:user_id] = user.id
-        redirect_to '/'
+    respond_to do |_format|
+      if validates.messages.empty?
+        user = User.new(user_params)
+
+        if user.save
+          session[:user_id] = user.id
+          _format.html { redirect_to '/' }
+        else
+          _format.html { redirect_to '/signup' }
+        end
       else
-        redirect_to '/signup'
+        _format.html { redirect_to :signup, errors: validates.messages }
       end
-    else
-      render action: 'new'
     end
   end
 

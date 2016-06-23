@@ -1,6 +1,8 @@
 h1
   | Signup!
-= form_for :user, url: '/users' do |f|
+= simple_form_for :user, url: '/users' do |f|
+  - flash.each do |key, value|
+    = value
   |  Name: 
   = f.text_field :name
   |  Email: 
