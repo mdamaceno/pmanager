@@ -50,3 +50,11 @@ pt-BR:
           arg:
             default: "length precisa ser %{size}"
             range: "length precisa ser within %{left} - %{right}"
+
+    rules:
+      email:
+        filled?: "Email está ausente"
+        format?: "Email está em formato inválido"
+        email?: "Email está em formato inválido"
+      name:
+        filled?: "Nome está ausente"

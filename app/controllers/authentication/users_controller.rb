@@ -14,7 +14,7 @@ class Authentication::UsersController < Authentication::BaseController
           _format.html { redirect_to '/signup' }
         end
       else
-        _format.html { redirect_to '/signup', alert: validates.messages }
+        _format.html { redirect_to '/signup', alert: validates.messages(locale: :'pt-BR') }
       end
     end
   end
