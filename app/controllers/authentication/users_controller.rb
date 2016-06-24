@@ -6,6 +6,7 @@ class Authentication::UsersController < Authentication::BaseController
     respond_to do |_format|
       if validates.messages.empty?
         user = User.new(user_params)
+        user.username = SecureRandom.hex(10)
 
         if user.save
           session[:user_id] = user.id

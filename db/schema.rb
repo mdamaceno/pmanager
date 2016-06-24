@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160621045154) do
   create_table "users", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "username",                limit: 100,             null: false
     t.string   "email",                                           null: false
-    t.string   "password_digest",         limit: 30,              null: false
+    t.string   "password_digest",                                 null: false
     t.string   "name"
     t.string   "slug"
     t.integer  "role",                                default: 0

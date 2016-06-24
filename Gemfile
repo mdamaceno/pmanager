@@ -16,6 +16,8 @@ gem 'pundit'
 gem 'ar-uuid'
 gem 'friendly_id', '~> 5.1.0'
 gem 'dry-validation'
+gem 'slugify'
+gem 'bcrypt', require: 'bcrypt'
 
 group :development, :test do
   gem 'byebug'
