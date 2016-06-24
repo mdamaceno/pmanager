@@ -58,3 +58,5 @@ pt-BR:
         email?: "Email está em formato inválido"
       name:
         filled?: "Nome está ausente"
+      password:
+        filled?: "Senha precisa ser preenchida"
