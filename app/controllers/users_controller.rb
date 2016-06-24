@@ -1,4 +1,6 @@
-class Authentication::UsersController < Authentication::BaseController
+class UsersController < ApplicationController
+  layout 'authentication/layouts/application'
+
   def new
   end
 
