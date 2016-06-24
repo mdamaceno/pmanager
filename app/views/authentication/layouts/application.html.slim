@@ -7,4 +7,5 @@ html
     = javascript_include_tag 'authentication/application'
     = csrf_meta_tags
   body
+    = render 'authentication/layouts/partials/flash_messages'
     = yield

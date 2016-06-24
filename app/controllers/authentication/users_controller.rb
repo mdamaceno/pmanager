@@ -1,4 +1,4 @@
-class Authentication::UsersController < ApplicationController
+class Authentication::UsersController < Authentication::BaseController
   def new
   end
 
@@ -14,7 +14,7 @@ class Authentication::UsersController < ApplicationController
           _format.html { redirect_to '/signup' }
         end
       else
-        _format.html { redirect_to :signup, errors: validates.messages }
+        _format.html { redirect_to '/signup', alert: validates.messages }
       end
     end
   end

@@ -1,4 +1,9 @@
 pt-BR:
+  activerecord:
+    models:
+      user:
+        name: Nome
+        email: Email
   errors:
     array?: "precisa ser uma lista"
     empty?: "precisa ser vazio"
