@@ -1,0 +1,8 @@
+h1
+  | Login!
+= simple_form_for :user, url: '/login' do |f|
+  |  Email: 
+  = f.text_field :email
+  |  Password: 
+  = f.password_field :password
+  = f.submit "Submit"
