@@ -48,8 +48,8 @@ pt-BR:
       value:
         string:
           arg:
-            default: "length precisa ser %{size}"
-            range: "length precisa ser within %{left} - %{right}"
+            default: "tamanho precisa ser %{size}"
+            range: "tamanho precisa ser entre %{left} e %{right}"
 
     rules:
       email:
@@ -59,8 +59,15 @@ pt-BR:
       name:
         filled?: "Nome está ausente"
       password:
+        min_size?: "Senha deve ter no mínimo %{num} caracteres"
         filled?: "Senha precisa ser preenchida"
+        eql?: "Senha não confere"
+        size?:
+          arg:
+            default: "Senha precisa ter %{size} caracteres"
+            range: "Senha precisa ter entre %{left} e %{right} caracteres"
       password_confirmation:
-        filled?: "Confirmação de senha precisam ser preenchida"
+        filled?: "Senha precisa ser preenchida"
+        eql?: "Senha não confere"
       password_presence:
         eql?: "Senha e confirmação de senha precisam ser preenchidos"

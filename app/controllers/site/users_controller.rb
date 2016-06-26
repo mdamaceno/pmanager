@@ -40,7 +40,7 @@ class Site::UsersController < Site::BaseController
 
   def error_validation
     flash[:validation] = @@user_validation.validate_user(user_params)
-                                          .messages(locale: :'pt-BR')
+                                          .messages(full: true, locale: :'pt-BR')
     render :new
   end
 
