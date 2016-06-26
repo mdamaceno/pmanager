@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'welcome#index'
+  root to: 'site/home#index'
 
   scope module: 'site' do
     get '/login' => 'sessions#new'
