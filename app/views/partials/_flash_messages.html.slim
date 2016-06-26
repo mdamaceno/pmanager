@@ -6,3 +6,5 @@
           - value.each do |attr|
             - attr[1].each do |message|
               li = message
+        - if key == 'notice'
+          li = value

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :check_if_logged, only: [:new]
+
   layout 'authentication/layouts/application'
 
   def new
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
           _format.html { redirect_to '/' }
         else
           # If user's login doesn't work, send them back to the login form.
-          _format.html { redirect_to '/login' }
+          _format.html { redirect_to '/login', notice: 'Usuário ou senha incorretos' }
         end
       else
         _format.html { redirect_to '/login', alert: validates.messages(locale: :'pt-BR') }

@@ -7,4 +7,9 @@ html
     = javascript_include_tag 'site/application'
     = csrf_meta_tags
   body
+    - if current_user
+      = link_to 'Logout', '/logout'
+    - else
+      = link_to 'Login', '/login'
+    = render 'partials/flash_messages'
     = yield
