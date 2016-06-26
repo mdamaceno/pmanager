@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   layout 'authentication/layouts/application'
 
-  @@user = User.new
+  @@user = User
   @@user_validation = UserValidation.new
 
   def new
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end
 
     if @@user_validation.validate_user(user_params).messages.empty?
-      user = @@user(user_params)
+      user = @@user.new(user_params)
       user.username = SecureRandom.hex(10)
 
       save_or_not(user)
