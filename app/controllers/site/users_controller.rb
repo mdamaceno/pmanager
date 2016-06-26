@@ -1,8 +1,8 @@
-class UsersController < ApplicationController
-  layout 'authentication/layouts/application'
-
+class Site::UsersController < Site::BaseController
   @@user = User
   @@user_validation = UserValidation.new
+
+  layout 'authentication/site/layouts/application'
 
   def new
   end
@@ -25,6 +25,8 @@ class UsersController < ApplicationController
       error_validation
     end
   end
+
+  protected
 
   def error_if_already_regitered
     flash[:alert] = 'Email já cadastrado!'

@@ -1,7 +1,7 @@
-class SessionsController < ApplicationController
+class Site::SessionsController < Site::BaseController
   before_action :check_if_logged, only: [:new]
 
-  layout 'authentication/layouts/application'
+  layout 'authentication/site/layouts/application'
 
   def new
   end
