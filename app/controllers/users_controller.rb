@@ -37,15 +37,13 @@ class UsersController < ApplicationController
   private
 
   def error_if_already_regitered
-    flash[:alert] = 'Usuário já cadastrado!'
-    render :new
-    nil
+    flash[:alert] = 'Email já cadastrado!'
+    redirect_to '/signup'
   end
 
   def error_if_password_does_not_match
     flash[:alert] = 'Senha não confirmada!'
-    render :new
-    nil
+    redirect_to '/signup'
   end
 
   def user_params
