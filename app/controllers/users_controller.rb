@@ -32,8 +32,6 @@ class UsersController < ApplicationController
     end
   end
 
-  private
-
   def error_if_already_regitered
     flash[:alert] = 'Email já cadastrado!'
     redirect_to '/signup'
@@ -43,6 +41,8 @@ class UsersController < ApplicationController
     flash[:alert] = 'Senha não confirmada!'
     redirect_to '/signup'
   end
+
+  private
 
   def user_params
     params.require(:user).permit!
