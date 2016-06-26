@@ -17,7 +17,7 @@ describe Site::UsersController, type: :controller do
         end.to change(User, :count).by(1)
       end
 
-      it 'redirects to the welcome#index' do
+      it 'redirects to the welcome#index (homepage)' do
         post :create, user: single_user
         expect(response).to redirect_to '/'
       end
