@@ -24,13 +24,11 @@ class UsersController < ApplicationController
         redirect_to '/'
       else
         render :new
-        return
       end
     else
       flash[:validation] = @@user_validation.validate_user(user_params)
                                             .messages(locale: :'pt-BR')
       render :new
-      return
     end
   end
 
