@@ -1,6 +1,6 @@
 pt-BR:
   activerecord:
-    models:
+    attributes:
       user:
         name: Nome
         email: Email
@@ -60,3 +60,7 @@ pt-BR:
         filled?: "Nome está ausente"
       password:
         filled?: "Senha precisa ser preenchida"
+      password_confirmation:
+        filled?: "Confirmação de senha precisam ser preenchida"
+      password_presence:
+        eql?: "Senha e confirmação de senha precisam ser preenchidos"

@@ -13,11 +13,7 @@ class SessionValidation
     Dry::Validation.Schema do
       configure { config.messages = :i18n }
       key(:email).required(:str?, format?: EMAIL_REGEX)
-      key(:password).required(gteq?: 6, lteq?: 20)
-
-      rule(password_presence: [:password, :password_confirmation]) do |pwd, pwdc|
-        pwd.filled?.then(pwdc.filled?)
-      end
+      key(:password).required(:str?, gteq?: 6, lteq?: 20)
     end
   end
 end
