@@ -8,13 +8,11 @@ class UserValidation
       key(:password) do
         min_size?(6)
         max_size?(20)
-        empty?
       end
 
       key(:password_confirmation) do
         min_size?(6)
         max_size?(20)
-        empty?
       end
     end
   end
