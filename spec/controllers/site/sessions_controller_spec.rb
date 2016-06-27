@@ -9,6 +9,12 @@ describe Site::SessionsController, type: :controller do
     end
 
     check_response_with_template('new', 'authentication/site/layouts/application')
+
+    it 'redirects user if already logged' do
+      session[:user_id] = user.id
+      get :new
+      expect(response).to redirect_to '/'
+    end
   end
 
   describe 'POST #create' do
