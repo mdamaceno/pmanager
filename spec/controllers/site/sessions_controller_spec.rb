@@ -22,4 +22,21 @@ describe Site::SessionsController, type: :controller do
       expect(response).to redirect_to '/'
     end
   end
+
+  describe 'GET #destroy' do
+    before do
+      session[:user_id] = user.id
+    end
+
+    it 'logout set user_id session to nil' do
+      get :destroy
+      expect(session[:user_id]).to_not eq(user.id)
+      expect(session[:user_id]).to be_nil
+    end
+
+    it 'logout redirects to homepage' do
+      get :destroy
+      expect(response).to redirect_to '/login'
+    end
+  end
 end
