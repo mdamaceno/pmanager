@@ -1,0 +1,3 @@
+[submdules "damauth"]
+ path = engines/damauth
+ url = git@github.com:mdamaceno/damauth.git
