@@ -1,6 +1,8 @@
 PATH
   remote: engines/damauth
   specs:
+    damauth (0.0.1)
+      rails (~> 4.2.6)
 
 GEM
   remote: https://rubygems.org/
